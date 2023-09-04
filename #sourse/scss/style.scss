@@ -1,0 +1,348 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&family=Raleway&display=swap');
+
+body{
+  box-sizing: border-box;
+}
+.wrapper{
+  min-width: 100%;
+  overflow: hidden;
+}
+.container {
+  max-width: 1143px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 64px 20px 0 20px;
+  background-color: #f0f1f3;
+  font-family: Montserrat, serif ;
+  &__logo{
+    box-sizing: border-box;
+    text-align: center;
+    width: 113px;
+    border: 5.6px solid #170f1c;
+    font-size: 17px;
+    line-height: 34px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-shadow: 0 0 2px rgba(21,21,22,0.75);
+    color: #000000;
+    margin: 0 0 200px 0;
+    & span{
+      font-size: 21px;
+      color: #77efe5;
+    }
+  }
+
+  &__row {
+    word-wrap: break-word;
+    text-align: center;
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    text-shadow: 4px 8px 10px rgba(0,0,0,0.23);
+    color: #505050;
+    margin: 0 0 142px 0;
+    & p{
+      margin: 0 0 15px 0;
+      &:last-child{
+        margin: 0;
+      }
+    }
+    & span{
+      padding: 0 13px;
+      background-color: rgba(118, 244, 234, 0.5);
+    }
+  }
+}
+.contact {
+  &__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__btn {
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    //padding: 11px 47px;
+    width: 232px;
+    height: 53px;
+    text-align: center;
+
+    & a {
+      opacity: 0.74;
+      font-size: 18px;
+      line-height: 50px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #000000;
+
+    }
+
+  }
+
+  &__glass {
+    padding: 0 100px 0 0;
+    //margin: 0 0 138px 0;
+    margin: 0 0 195px 0;
+    align-self: end;
+    position: relative;
+
+    & img:nth-child(1) {
+      position: absolute;
+      z-index: 5;
+      top: -24px;
+      left: -55px;
+    }
+      & img:nth-child(2) {
+        position: absolute;
+        z-index: 2;
+        top: -28px;
+        left: -75px;
+      }
+    & img:nth-child(3) {
+      position: absolute;
+      z-index: 0;
+      top: -12px;
+      left: -69px;
+      box-shadow: 5px 5px 5px #8a8a8a;
+    }
+    }
+  }
+@media (max-width: 612px) {
+  .contact__glass img {
+    margin: 50px 0 0 0;
+  }
+}
+
+
+
+.about {
+  background-color: #f8fafa;
+  padding: 130px 0 0 0;
+  &__max {
+    padding: 0 0 0 6px;
+    //max-width: 1023px;
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin: 0 0 14px 22px;
+  }
+  &__subtitle {
+    text-align: center;
+    opacity: 0.61;
+    font-family: Merriweather;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #000000;
+    margin: 0 0 145px 0;
+  }
+
+  &__row {
+    margin: 0 0 0 27px;
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__image {
+   //width: 392px;
+   // & img{
+   //   width: 100%;
+   //   height: 100%;
+   //   object-fit: cover;
+   //
+   // }
+    flex: 0 0 392px;
+    margin: 0 40px 0 0;
+    background-color: #e4e5e8;
+    box-shadow: 0px 0px 30px 0px rgba(20,20,21,0.12);
+    align-self: start;
+  }
+
+  &__body {
+    padding: 0 0 0 123px;
+    flex: 1 1 auto;
+  }
+  &__text{
+    margin: 0 0 230px 0;
+
+    & h2{
+      opacity: 0.74;
+      font-family: Merriweather;
+      font-size: 20px;
+      line-height: 22px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #000000;
+      margin: 0 0 25px 0;
+    }
+    & p{
+      opacity: 0.74;
+      font-family: Raleway;
+      font-size: 16px;
+      line-height: 28px;
+      font-weight: 400;
+      letter-spacing: 0.045em;
+      color: #000000;
+      margin: 0 0 28px 0;
+      &:last-child{
+        margin: 0;
+      }
+    }
+
+    & h3{
+      font-family: Merriweather;
+      font-size: 17px;
+      line-height: 28px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #000000;
+      margin: 0 0 10px 0;
+    }
+
+  }
+}
+
+.featured {
+  padding: 125px 20px 0 20px;
+  &__title {
+    margin: 0 0 10px 0;
+  }
+  &__subtitle {
+    text-align: center;
+    opacity: 0.61;
+    font-family: Merriweather;
+    font-size: 17px;
+    line-height: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #000000;
+    margin: 0 0 110px 0;
+  }
+
+  &__row {
+  margin: 0 0 125px 0;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -7.5px;
+  }
+
+  &__item {
+    padding: 7.5px 7.5px;
+  }
+}
+
+
+
+
+
+.title {
+  opacity: 0.9;
+  font-size: 38px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #000000;
+  text-align: center;
+  font-family: Montserrat;
+}
+
+
+
+
+.footer {
+    background-color: #262b2e;
+
+    &__body {
+      padding: 93px 0 0 0;
+      margin: 0 auto;
+      height: 315px;
+      max-width: 205px;
+    }
+
+    &__social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      max-width: 205px;
+    }
+
+    &__text {
+      opacity: 0.8;
+      font-family: Raleway, serif;
+      font-size: 16px;
+      line-height: 25px;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      color: #ffffff;
+      margin: 0 0 19px 0;
+    }
+
+    &__list {
+      min-width: 205px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__link {
+      width: 46px;
+      height: 40px;
+      opacity: 0.19;
+      background-color: #8a8a8a;
+      text-align: center;
+
+      &:first-child {
+        opacity: 0.91;
+        background-color: #71f6eb;
+
+        & a {
+          color: #000000;
+        }
+      }
+
+      & a {
+        color: #faf4f4;
+        font-size: 23.6px;
+        line-height: 40px;
+
+        &:hover {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
