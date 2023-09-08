@@ -21,37 +21,37 @@ var popup_close_body = document.getElementsByClassName("popup__body")[0];
     popup.style.visibility = "visible";
     popup.style.opacity = "1";
     popup.style.transition = "all 500ms ease-out 0s";
-    popup_image.src = "../img/featured/1.jpg";
+    popup_image.src = "img/featured/1.jpg";
 }
     btn_img_2.onclick = function () {
     popup.style.visibility = "visible";
     popup.style.opacity = "1";
     popup.style.transition = "all 500ms ease-out 0s";
-    popup_image.src = "../img/featured/2.jpg";
+    popup_image.src = "img/featured/2.jpg";
 }
     btn_img_3.onclick = function () {
     popup.style.visibility = "visible";
     popup.style.opacity = "1";
     popup.style.transition = "all 500ms ease-out 0s";
-    popup_image.src = "../img/featured/3.jpg";
+    popup_image.src = "img/featured/3.jpg";
 }
     btn_img_4.onclick = function () {
     popup.style.visibility = "visible";
     popup.style.opacity = "1";
     popup.style.transition = "all 500ms ease-out 0s";
-    popup_image.src = "../img/featured/4.jpg";
+    popup_image.src = "img/featured/4.jpg";
 }
     btn_img_5.onclick = function () {
     popup.style.visibility = "visible";
     popup.style.opacity = "1";
     popup.style.transition = "all 500ms ease-out 0s";
-    popup_image.src = "../img/featured/5.jpg";
+    popup_image.src = "img/featured/5.jpg";
 }
     btn_img_6.onclick = function () {
     popup.style.visibility = "visible";
     popup.style.opacity = "1";
     popup.style.transition = "all 500ms ease-out 0s";
-    popup_image.src = "../img/featured/6.jpg";
+    popup_image.src = "img/featured/6.jpg";
 }
 
 
