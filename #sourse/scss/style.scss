@@ -4,14 +4,30 @@
 
 body{
   box-sizing: border-box;
+  position: relative;
+
 }
 .wrapper{
   min-width: 100%;
   overflow: hidden;
+  z-index: 0;
+
 }
 .container {
   max-width: 1143px;
   margin: 0 auto;
+}
+
+.title {
+  opacity: 0.9;
+  font-size: 38px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #000000;
+  text-align: center;
+  font-family: Montserrat;
 }
 
 .header {
@@ -60,6 +76,7 @@ body{
     }
   }
 }
+
 .contact {
   &__row {
     display: flex;
@@ -71,7 +88,6 @@ body{
     box-sizing: border-box;
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: 2px;
-    //padding: 11px 47px;
     width: 232px;
     height: 53px;
     text-align: center;
@@ -84,10 +100,17 @@ body{
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: #000000;
+      transition: all 0.2s ease-out 0s;
+      &:hover {
+        font-size: 24px;
+        font-weight: 700;
 
+
+      }
     }
 
   }
+
 
   &__glass {
     padding: 0 100px 0 0;
@@ -102,12 +125,14 @@ body{
       top: -24px;
       left: -55px;
     }
-      & img:nth-child(2) {
-        position: absolute;
-        z-index: 2;
-        top: -28px;
-        left: -75px;
-      }
+
+    & img:nth-child(2) {
+      position: absolute;
+      z-index: 2;
+      top: -28px;
+      left: -75px;
+    }
+
     & img:nth-child(3) {
       position: absolute;
       z-index: 0;
@@ -115,14 +140,63 @@ body{
       left: -69px;
       box-shadow: 5px 5px 5px #8a8a8a;
     }
-    }
   }
+}
+
 @media (max-width: 612px) {
   .contact__glass img {
     margin: 50px 0 0 0;
   }
 }
+@media(max-width: 800px){
+  .about__row{
+    display: block;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+  .about__image {
+    margin: 0 0 30px 0;
+    max-width: 392px;
+    align-self: center;
+  }
+  .about__image img{
+    //margin: 0 ;
+    width: 100%;
+    height: 100%;
+  }
+  .about__body{
+    text-align: center;
+  }
+  .about__max {
+    padding: 0;
+  }
+}
+@media(max-width: 1116px) {
+  .forms {
+    &__input {
+      margin: 0 0 30px 0;
+    }
+    &__row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__map{
+      max-width: 100%;
+    }
+  }
+}
+@media(max-width: 620px) {
+  .footer {
+    &__top {
+      padding: 121px 30px;
+      background: url("/img/footer/bg.png") 100%/cover no-repeat;
+    }
+  }
 
+
+  }
 
 
 .about {
@@ -158,23 +232,16 @@ body{
 
   }
 
-  &__image {
-   //width: 392px;
-   // & img{
-   //   width: 100%;
-   //   height: 100%;
-   //   object-fit: cover;
-   //
-   // }
+  &__image img{
     flex: 0 0 392px;
-    margin: 0 40px 0 0;
+    margin: 0 163px 0 0;
     background-color: #e4e5e8;
     box-shadow: 0px 0px 30px 0px rgba(20,20,21,0.12);
     align-self: start;
   }
 
   &__body {
-    padding: 0 0 0 123px;
+    //padding: 0 0 0 123px;
     flex: 1 1 auto;
   }
   &__text{
@@ -204,8 +271,8 @@ body{
         margin: 0;
       }
     }
-
     & h3{
+      opacity: 0.74;
       font-family: Merriweather;
       font-size: 17px;
       line-height: 28px;
@@ -234,7 +301,7 @@ body{
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: #000000;
-    margin: 0 0 110px 0;
+    margin: 0 0 98px 0;
   }
 
   &__row {
@@ -248,48 +315,159 @@ body{
   }
 
   &__item {
-    padding: 7.5px 7.5px;
+    flex: 1 1 auto;
+    & img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    padding: 6.5px 7.5px;
   }
 }
 
+.team {
+  background-color: #f9fbfb;
+  padding: 89px 0 0 0;
+  &__title {
+    margin: 0 0 10px 0;
+  }
 
+  &__subtitle {
+    text-align: center;
+    opacity: 0.61;
+    font-family: Merriweather;
+    font-size: 17px;
+    line-height: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #000000;
+    margin: 0 0 123px 0;
+  }
+  &__row {
+    padding: 0 0 179.5px 0;
 
-
-
-.title {
-  opacity: 0.9;
-  font-size: 38px;
-  line-height: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #000000;
-  text-align: center;
-  font-family: Montserrat;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -7.5px;
+  }
+  &__item {
+    flex: 1 1 auto;
+    & img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    padding: 7px 7.5px;
+  }
 }
 
+.forms {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__input {
+    background-color: rgba(2, 22, 35, 0.7);
+    box-shadow: 0 0 30px 0 rgba(21,21,21,0.11);
+    width: 614px;
+    padding: 24px 32px 35px 32px;
+    //flex: 0 1 auto;
+    & button{
+      font-family: Montserrat;
+      font-size: 18px;
+      line-height: 53px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(0, 0, 0, 0.7);
+      background-color: #6eeee4;
+      border-radius: 2px;
+      padding: 0 35px;
+      transition: all 100ms ease-in-out 0s;
+      &:hover{
+        background-color: #eedd6e;
+        box-shadow: 0 0 5px #fff;
+      }
+    }
+    & textarea{
+      margin: 0 0 38px 0;
+      height: 125px;
+      width: 550px;
+    }
+  }
+  &__item{
+    background-color: rgba(2, 22, 35, 0);
+    font-family: Raleway;
+    font-size: 15px;
+    line-height: 51px;
+    font-weight: 400;
+    width: 100%;
+    border: 0 solid transparent;
+    border-bottom: 2px solid #53616b;
+    outline: none;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 6px 0;
+  }
+  &__map {
+    background-color: rgba(2, 22, 35, 0.7);
+  }
+  &__body {
+    padding: 25px 23px 19px 23px;
+  }
+  &__text {
+    opacity: 0.7;
+    font-family: Raleway;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #ffffff;
+    padding: 0 0 0 7px;
+    margin: 0 0 20px 0;
+  }
+  &__list {
+    & li:nth-child(4){
+      margin: 0 0 25px 0;
+    }
+  }
+}
 
-
+.map__item {
+  & iframe{
+    width: 455px;
+    height: 224px;
+    }
+  }
 
 .footer {
+  &__top{
+    padding: 121px 0;
+    background: url("/img/footer/bg.png") 100%/cover no-repeat;
+    min-width: 100%;
+  }
+  &__bot{
     background-color: #262b2e;
-
-    &__body {
+  }
+  &__forms {
+    margin: 0 0 122px 0;
+  }
+  &__body {
       padding: 93px 0 0 0;
       margin: 0 auto;
       height: 315px;
       max-width: 205px;
     }
-
-    &__social {
+  &__social {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       max-width: 205px;
     }
-
-    &__text {
+  &__text {
       opacity: 0.8;
       font-family: Raleway, serif;
       font-size: 16px;
@@ -299,33 +477,29 @@ body{
       color: #ffffff;
       margin: 0 0 19px 0;
     }
-
-    &__list {
+  &__list {
       min-width: 205px;
       display: flex;
       justify-content: space-between;
     }
-
-    &__link {
+  &__link {
       width: 46px;
       height: 40px;
       opacity: 0.19;
       background-color: #8a8a8a;
       text-align: center;
-
       &:first-child {
         opacity: 0.91;
         background-color: #71f6eb;
-
         & a {
           color: #000000;
         }
       }
-
       & a {
         color: #faf4f4;
         font-size: 23.6px;
         line-height: 40px;
+        transition: all 50ms ease-in-out 0s;
 
         &:hover {
           font-size: 30px;
@@ -333,6 +507,69 @@ body{
       }
     }
   }
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(2, 2, 2, 0.8);
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  overflow-y: scroll;
+  &__body{
+    display: flex;
+  }
+  &__content {
+    max-width: 700px;
+    flex: 1 1 auto;
+    background-color: white;
+    color: black;
+    position: relative;
+  }
+
+  & img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  &__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 30px;
+    color: #000;
+    width: 20px;
+    height: 20px;
+    text-decoration: none;
+    &:hover{
+      width: 25px;
+      height: 25px;
+      box-shadow: 0 0 6px #ffffff;
+      transition: all 80ms ease-in 0s;
+      .popup__close img{
+        opacity: 0.8;
+      }
+    }
+    & img{
+      max-width: 100%;
+      max-height: 100%;
+      opacity: 0.2;
+    }
+  }
+  &__body{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+  }
+}
+
+
 
 
 
