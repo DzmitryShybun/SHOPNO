@@ -384,7 +384,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: #000000;
-  margin: 0 0 98px 0;
+  margin: 0 0 107px 0;
 }
 .featured__row {
   margin: 0 0 125px 0;
@@ -412,7 +412,7 @@ body {
 
 .team {
   background-color: #f9fbfb;
-  padding: 89px 0 0 0;
+  padding: 92px 0 0 0;
 }
 .team__title {
   margin: 0 0 10px 0;
@@ -427,7 +427,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: #000000;
-  margin: 0 0 123px 0;
+  margin: 0 0 110px 0;
 }
 .team__row {
   padding: 0 0 179.5px 0;
@@ -445,12 +445,113 @@ body {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   padding: 7px 7.5px;
+  position: relative;
 }
 .team__item img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.team__item:hover .team__hover {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.5s linear 0s;
+  transition: all 0.5s linear 0s;
+}
+.team__hover {
+  position: absolute;
+  top: 188px;
+  left: 25px;
+  background-color: rgb(113, 247, 236);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s linear 0s;
+  transition: all 0.5s linear 0s;
+}
+.team__hover:after {
+  content: "";
+  position: absolute;
+  top: -37px;
+  left: 20px;
+  border: 20px solid transparent;
+  border-bottom: 20px solid rgb(113, 247, 236);
+}
+
+.hover__body {
+  max-width: 335px;
+  max-height: 241px;
+  padding: 38px 30px 0 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.hover__title {
+  opacity: 0.94;
+  font-family: Merriweather;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #272727;
+  margin: 0 0 13px 0;
+}
+.hover__title span {
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.03em;
+  color: #767070;
+}
+.hover__text {
+  opacity: 0.8;
+  font-family: Raleway;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #000000;
+  margin: 0 0 39px 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.hover__links {
+  max-width: 90px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 90px;
+          flex: 0 0 90px;
+}
+.hover__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.hoveritem {
+  width: 40px;
+  height: 40px;
+}
+.hover__link {
+  opacity: 0.7;
+  font-family: "Font Awesome";
+  font-size: 13.5px;
+  line-height: 21px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #000000;
+  margin: 0 0 30px 0;
+}
+.hover__link:hover {
+  font-size: 18px;
+  opacity: 1;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.29);
 }
 
 .forms__row {
@@ -540,11 +641,8 @@ body {
 .footer__bot {
   background-color: #262b2e;
 }
-.footer__forms {
-  margin: 0 0 122px 0;
-}
 .footer__body {
-  padding: 93px 0 0 0;
+  padding: 83px 0 0 0;
   margin: 0 auto;
   height: 315px;
   max-width: 205px;
