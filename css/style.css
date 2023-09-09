@@ -652,7 +652,7 @@ body {
 
 .footer__top {
   padding: 121px 0;
-  background: url("img/footer/bg.png") 100%/cover no-repeat;
+  background: url("/img/footer/bg.png") 100%/cover no-repeat;
   min-width: 100%;
 }
 .footer__bot {
