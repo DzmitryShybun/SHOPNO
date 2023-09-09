@@ -258,16 +258,9 @@ body {
     margin: 0 0 30px 0;
   }
   .forms__row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
   }
   .forms__map {
     max-width: 100%;
@@ -403,6 +396,9 @@ body {
           flex: 1 1 auto;
   padding: 6.5px 7.5px;
 }
+.featured__item:hover {
+  cursor: pointer;
+}
 .featured__item img {
   width: 100%;
   height: 100%;
@@ -479,6 +475,9 @@ body {
 }
 
 .hover__body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   max-width: 335px;
   max-height: 241px;
   padding: 38px 30px 0 38px;
@@ -508,6 +507,10 @@ body {
   color: #767070;
 }
 .hover__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  min-height: 80px;
   opacity: 0.8;
   font-family: Raleway;
   font-size: 16px;
@@ -516,9 +519,7 @@ body {
   letter-spacing: 0.01em;
   color: #000000;
   margin: 0 0 39px 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  overflow-y: auto;
 }
 .hover__links {
   max-width: 90px;
@@ -552,6 +553,8 @@ body {
   font-size: 18px;
   opacity: 1;
   border-bottom: 2px solid rgba(0, 0, 0, 0.29);
+  -webkit-transition: all 180ms linear 0s;
+  transition: all 180ms linear 0s;
 }
 
 .forms__row {
@@ -565,10 +568,15 @@ body {
       flex-wrap: wrap;
 }
 .forms__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
   background-color: rgba(2, 22, 35, 0.7);
   -webkit-box-shadow: 0 0 30px 0 rgba(21, 21, 21, 0.11);
           box-shadow: 0 0 30px 0 rgba(21, 21, 21, 0.11);
-  width: 614px;
   padding: 24px 32px 35px 32px;
 }
 .forms__input button {
@@ -596,6 +604,9 @@ body {
   width: 550px;
 }
 .forms__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   background-color: rgba(2, 22, 35, 0);
   font-family: Raleway;
   font-size: 15px;
@@ -610,9 +621,15 @@ body {
 }
 .forms__map {
   background-color: rgba(2, 22, 35, 0.7);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
 }
 .forms__body {
   padding: 25px 23px 19px 23px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 .forms__text {
   opacity: 0.7;
@@ -724,7 +741,7 @@ body {
   display: flex;
 }
 .popup__content {
-  max-width: 700px;
+  max-width: 600px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
